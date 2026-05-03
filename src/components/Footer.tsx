@@ -34,7 +34,7 @@ const socials = [
   {
     icon:  InstagramIcon,
     label: 'Instagram',
-    href:  'https://instagram.com/nextdukaan',
+    href:  'https://instagram.com/nextdukaan.in',
     color: 'hover:text-pink-400',
   },
   {
@@ -124,7 +124,7 @@ export default function Footer() {
                 <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.03]">
                   <Mail size={13} />
                 </div>
-                <span>hello@nextdukaan.in</span>
+                <span>nextdukaan.bussiness@gmail.com</span>
                 <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
 
@@ -135,7 +135,7 @@ export default function Footer() {
                 <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.03]">
                   <Phone size={13} />
                 </div>
-                <span>+91 99999 99999</span>
+                <span>+91 9462474897</span>
                 <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
 
