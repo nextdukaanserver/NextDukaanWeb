@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+/* ── Tailwind v4 Theme Extension ───────────────────────────────── */
+@theme {
+  --font-sora: 'Sora', sans-serif;
+  --color-green-500: #22c55e;
+  --color-orange-400: #f97316;
+  --shadow-glow-green: 0 0 60px rgba(34, 197, 94, 0.35);
+  --shadow-glow-green-sm: 0 0 30px rgba(34, 197, 94, 0.25);
+}
+
+/* ── Design Tokens ─────────────────────────────────────────────── */
+:root {
+  --bg-base:        #020617;
+  --bg-surface:     #0f172a;
+  --border:         rgba(255, 255, 255, 0.06);
+  --accent-primary: #22c55e;
+  --accent-alt:     #f97316;
+  --text-primary:   #f8fafc;
+  --text-muted:     #94a3b8;
+
+  /* Glow shadows */
+  --glow-green:  0 0 60px rgba(34, 197, 94, 0.35);
+  --glow-green-sm: 0 0 30px rgba(34, 197, 94, 0.25);
+  --glow-orange: 0 0 60px rgba(249, 115, 22, 0.25);
+}
+
+/* ── Base Reset ────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ── Grid Background Overlay ───────────────────────────────────── */
+.grid-bg {
+  position: relative;
+}
+.grid-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Typography ────────────────────────────────────────────────── */
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #22c55e 0%, #4ade80 50%, #86efac 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow Utilities ────────────────────────────────────────────── */
+.glow-green {
+  box-shadow: var(--glow-green);
+}
+
+.glow-green-sm {
+  box-shadow: var(--glow-green-sm);
+}
+
+.glow-card:hover {
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.3), 0 0 40px rgba(34, 197, 94, 0.15);
+}
+
+/* ── Glassmorphism ─────────────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-nav {
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-nav-scrolled {
+  background: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* ── Glow Blobs ────────────────────────────────────────────────── */
+.blob-green {
+  background: radial-gradient(ellipse at center, rgba(34, 197, 94, 0.28) 0%, transparent 70%);
+  filter: blur(80px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.blob-orange {
+  background: radial-gradient(ellipse at center, rgba(249, 115, 22, 0.22) 0%, transparent 70%);
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.blob-blue {
+  background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.18) 0%, transparent 70%);
+  filter: blur(120px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 197, 94, 0.3);
+  border-radius: 9999px;
+}
+
+/* ── Selection ─────────────────────────────────────────────────── */
+::selection {
+  background: rgba(34, 197, 94, 0.25);
+  color: #f8fafc;
+}
+
+/* ── Pulse WhatsApp FAB ─────────────────────────────────────────── */
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  70% { transform: scale(1.5); opacity: 0; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: rgba(34, 197, 94, 0.4);
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+/* ── Marquee ───────────────────────────────────────────────────── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+/* ── Browser mockup cursor blink ───────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ── Pricing card ring ─────────────────────────────────────────── */
+.pricing-popular {
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.4), 0 0 60px rgba(34, 197, 94, 0.12);
+}
+
+/* ── Stepper line ──────────────────────────────────────────────── */
+.step-line {
+  position: absolute;
+  top: 24px;
+  left: calc(50% + 32px);
+  right: calc(-50% + 32px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(34, 197, 94, 0.4) 0%, rgba(255,255,255,0.08) 100%);
+}
+
+/* ── Testimonial left border ───────────────────────────────────── */
+.testimonial-card {
+  border-left: 2px solid rgba(34, 197, 94, 0.5);
+}
+
+/* ── Hero typing animation ─────────────────────────────────────── */
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* ── Toast styles ──────────────────────────────────────────────── */
+.react-hot-toast-custom {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+}
