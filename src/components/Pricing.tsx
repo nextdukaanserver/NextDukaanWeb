@@ -26,7 +26,7 @@ interface Plan {
 const plans: Plan[] = [
   {
     name:     'Starter',
-    price:    '₹4,999 – ₹8,999',
+    price:    '₹4,999',
     subtitle: 'Perfect to launch fast',
     for:      'New businesses going online',
     popular:  false,
@@ -47,7 +47,7 @@ const plans: Plan[] = [
   },
   {
     name:     'Growth',
-    price:    '₹14,999 – ₹24,999',
+    price:    '₹9,999',
     subtitle: 'For serious digital presence',
     for:      'Established shops wanting strong digital presence',
     popular:  true,
@@ -68,7 +68,7 @@ const plans: Plan[] = [
   },
   {
     name:     'Scale',
-    price:    '₹39,999+',
+    price:    '₹24,999+',
     subtitle: 'Full-stack digital growth',
     for:      'Multi-location or high-traffic businesses',
     popular:  false,
