@@ -9,6 +9,8 @@ import Testimonials from './components/Testimonials';
 import ContactCTA   from './components/ContactCTA';
 import Footer       from './components/Footer';
 import WhatsAppFAB  from './components/WhatsAppFAB';
+import Technology from './components/Technology';
+
 
 export default function App() {
   return (
@@ -19,7 +21,9 @@ export default function App() {
         <Services />
         <Pricing />
         <Portfolio />
+        <Technology />
         <WhyUs />
+        
         <Process />
         <Testimonials />
         <ContactCTA />

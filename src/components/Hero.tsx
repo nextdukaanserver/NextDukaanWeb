@@ -38,7 +38,7 @@ function BrowserMockup() {
           <div className="flex flex-1 items-center gap-2 rounded-lg border border-white/[0.06] bg-white/[0.04] px-3 py-1.5">
             <div className="h-2 w-2 rounded-full bg-green-400 shadow-[0_0_6px_rgba(34,197,94,0.9)]" />
             <span className="font-mono text-xs text-slate-400">
-              yourshop.nextdukaan.in
+              yourshop.in
               <span className="cursor-blink ml-0.5 text-green-400">|</span>
             </span>
           </div>
@@ -179,7 +179,7 @@ export default function Hero() {
               className="max-w-lg text-lg leading-relaxed text-slate-400 sm:text-xl"
             >
               We build websites, shoot reels &amp; run SEO — so your business gets{' '}
-              <span className="text-slate-200 font-medium">found, trusted, and chosen.</span>
+              <span className="text-slate-200 font-medium">Barmer Based,found, trusted, and chosen.</span>
             </motion.p>
 
             {/* CTA Row */}
