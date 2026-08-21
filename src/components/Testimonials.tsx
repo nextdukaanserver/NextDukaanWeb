@@ -42,7 +42,7 @@ const testimonials = [
     color:    '#ec4899',
   },
   {
-    quote:    "Fast delivery, fair pricing, and they actually care about results — not just deliverables. Our new website looks premium and converts visitors to walk-ins.",
+    quote:    "Fast delivery, clean execution, and they actually care about results — not just deliverables. Our new website looks premium and converts visitors to walk-ins.",
     name:     'Mohammed Rafi',
     business: 'Al-Noor Bakery, Hyderabad',
     type:     'Bakery & Café',
@@ -192,3 +192,4 @@ export default function Testimonials() {
     </section>
   );
 }
+

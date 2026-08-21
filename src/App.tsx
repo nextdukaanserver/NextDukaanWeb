@@ -1,7 +1,6 @@
 import Navbar       from './components/Navbar';
 import Hero         from './components/Hero';
 import Services     from './components/Services';
-import Pricing      from './components/Pricing';
 import Portfolio    from './components/Portfolio';
 import WhyUs        from './components/WhyUs';
 import Process      from './components/Process';
@@ -19,8 +18,7 @@ export default function App() {
       <main>
         <Hero />
         <Services />
-        <Pricing />
-        <Portfolio />
+<Portfolio />
         <Technology />
         <WhyUs />
         
@@ -33,3 +31,4 @@ export default function App() {
     </div>
   );
 }
+

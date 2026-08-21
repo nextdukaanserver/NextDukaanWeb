@@ -22,7 +22,6 @@ function LinkedInIcon({ size = 16 }: { size?: number }) {
 
 const navLinks = [
   { label: 'Services',     href: '#services'     },
-  { label: 'Pricing',      href: '#pricing'      },
   { label: 'Portfolio',    href: '#portfolio'    },
   { label: 'Why Us',       href: '#why-us'       },
   { label: 'Process',      href: '#process'      },
@@ -182,3 +181,4 @@ export default function Footer() {
     </footer>
   );
 }
+

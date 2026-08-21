@@ -5,7 +5,6 @@ import GlowButton from './ui/GlowButton';
 
 const navLinks = [
   { label: 'Services',   href: '#services'     },
-  { label: 'Pricing',    href: '#pricing'      },
   { label: 'Portfolio',  href: '#portfolio'    },
   { label: 'About',      href: '#why-us'       },
   { label: 'Contact',    href: '#contact'      },
@@ -149,3 +148,5 @@ export default function Navbar() {
     </>
   );
 }
+
+

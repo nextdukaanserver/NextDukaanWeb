@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+.fs {
+  width: 100%;
+  max-width: 360px;
+  height: 460px;
+  margin: auto;
+  position: relative;
+}
+
+/* SCAN BOX */
+.fs-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #050b18;
+  border: 1px solid rgba(0,255,255,0.15);
+}
+
+/* GRID */
+.fs-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,0.06) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.4;
+}
+
+/* SCAN LINE */
+@keyframes move {
+  0% { top: -10%; opacity: 0; }
+  10% { opacity: 1; }
+  100% { top: 110%; opacity: 0; }
+}
+
+.fs-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: cyan;
+  box-shadow: 0 0 20px cyan;
+  animation: move 1.5s linear infinite;
+}
+
+/* CENTER UI */
+.fs-center {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: cyan;
+  text-align: center;
+}
+
+/* RING */
+.fs-ring {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,255,255,0.4);
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+/* CYBERPUNK DOT-MATRIX TEXT STYLES */
+.fs-small, .fs-title, .fs-num {
+  font-family: 'DotGothic16', monospace;
+  color: #00ffff;
+  text-shadow: 
+    0 0 5px rgba(0, 255, 255, 0.8),
+    0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.fs-small { 
+  font-size: 14px; 
+  letter-spacing: 4px; 
+  margin-top: 24px; 
+}
+
+.fs-title { 
+  font-size: 22px; 
+  margin-top: 6px; 
+  margin-bottom: 4px;
+  letter-spacing: 2px;
+}
+
+.fs-num { 
+  font-size: 18px; 
+  margin-top: 10px; 
+  letter-spacing: 2px;
+}
+
+/* BAR */
+.fs-bar {
+  width: 70%;
+  height: 6px;
+  background: rgba(255,255,255,0.08);
+  margin-top: 12px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.fs-bar div {
+  height: 100%;
+  background: cyan;
+  box-shadow: 0 0 15px cyan;
+  transition: width 0.05s linear;
+}
+
+/* FINAL REVEAL STYLES (Updated with bigger image) */
+.fs-reveal {
+  width: 100%;
+  height: 100%;
+  background: #050b18;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 16px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.fs-reveal img {
+  width: 220px;  /* Pehle 180px tha */
+  height: 220px; /* Pehle 180px tha */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid cyan;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+  margin-bottom: 20px; /* Adjusted gap */
+}
+
+.fs-reveal h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  letter-spacing: 1px;
+}
+
+.fs-reveal p {
+  font-size: 14px;
+  color: #94a3b8; 
+  line-height: 1.5;
+  margin: 0;
+}

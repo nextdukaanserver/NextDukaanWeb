@@ -158,7 +158,7 @@ export default function Hero() {
             <motion.div variants={fadeUp}>
               <span className="inline-flex items-center gap-2 rounded-full border border-green-500/25 bg-green-500/10 px-4 py-1.5 text-sm font-medium text-green-300">
                 <span>⚡</span>
-                Trusted by 50+ Local Businesses
+                Trusted by 25+ Trusted Clients
               </span>
             </motion.div>
 
@@ -167,7 +167,7 @@ export default function Hero() {
               variants={fadeUp}
               className="font-sora text-5xl font-black leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl"
             >
-              From Local Shop
+              From Local 
               <br />
               to{' '}
               <span className="text-gradient-green">Digital Brand.</span>
